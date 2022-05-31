@@ -1,0 +1,2 @@
+I had a dream yesterday that all random number websites (including client side ones) and lottery autoplay had an agreement that they would
+not dispose lottery results. So I created this to play tomorrow. If I win you should also use it, LOL.   
