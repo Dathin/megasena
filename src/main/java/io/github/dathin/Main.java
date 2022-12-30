@@ -1,7 +1,6 @@
 package io.github.dathin;
 
-import java.util.HashSet;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
 
@@ -12,11 +11,19 @@ public class Main {
 
         System.out.print("| ");
         while (set.size() < 6) {
-            var luckyNumber = random.nextInt(60);
-            set.add(luckyNumber);
-            // I really hope this + 1 is the best idea instead of increase bounds and ignore 0. If someday all numbers turn out to be my number - 1 it would be very funny. LOL
-            System.out.printf((luckyNumber + 1) + " | ");
+            var luckyNumber = random.nextInt(61);
+            if(luckyNumber > 0) {
+                // I really hope this + 1 is the best idea instead of increase bounds and ignore 0. If some day all numbers turn out to be my number - 1 it would be very funny. LOL
+                // Reversed since I was getting paranoid about it
+                set.add(luckyNumber);
+            }
         }
+        
+        var printSet = new TreeSet<>(set);
+        for (Integer luckyNumber : printSet) {
+            System.out.printf(luckyNumber + " | ");
+        }
+        
     }
 
 }
